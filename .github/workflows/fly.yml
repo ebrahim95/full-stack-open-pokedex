@@ -5,8 +5,7 @@ on:
       - main 
 
 jobs: 
-  deploy:
-    name: Deploy app
+  simple_fly_deploy:
     runs-on: ubuntu-latest 
     steps: 
       - uses: actions/checkout@v3
