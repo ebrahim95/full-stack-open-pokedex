@@ -3,10 +3,14 @@ on:
   push:
     branched:
       - main 
+  pull_requests: 
+    branches: [main] 
+    types: [opened, synchronize]
 
 jobs: 
   simple_fly_deploy:
     runs-on: ubuntu-latest 
+    if: ${{ github.event_name == 'push' }}
     steps: 
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master 
