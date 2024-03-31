@@ -1,8 +1,7 @@
 name: Fly Deploy 
 on:
   push:
-    branched:
-      - main 
+    branches: [main] 
   pull_request: 
     branches: [main] 
     types: [opened, synchronize]
